@@ -85,7 +85,6 @@ function saoLoneButton(state) {
 function saoModal(title, body, positiveResponseTitle, positiveResponse, isRefresh) {
     if (isRefresh === false && title === "" && body === "" && positiveResponseTitle === "" && positiveResponse === "") {
         var saoRandomSeed = Math.random();
-        switch (randomSeed)
         if (saoRandomSeed < 0.3) {
             title = "Dissolve";
             body = "Are you sure that you want to disband your party?";
