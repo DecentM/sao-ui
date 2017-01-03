@@ -5,7 +5,43 @@
         url("sword_art_online_font_by_darkblackswords-d5nssbp.otf")
 }
 
+body {
+    background-image: url('http://vignette3.wikia.nocookie.net/swordartonline/images/d/dd/First_Floor_forest.png/revision/latest?cb=20140309042049');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
 /* Sword Art Online experiment ####################################################################################################### */
+
+.sao-blur-behind:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url('http://vignette3.wikia.nocookie.net/swordartonline/images/d/dd/First_Floor_forest.png/revision/latest?cb=20140309042049');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(10px) brightness(.8);
+    z-index: 0;
+}
+
+.sao-blur-behind {
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, .5);
+    background-color: transparent;
+    position: relative;
+    z-index: 1
+}
+
+.sao-blur-behind > * {
+    position: relative;
+}
 
 .experimentSAOModalRoot .modal.sao .modal-dialog {
     transform: scale(.9);
