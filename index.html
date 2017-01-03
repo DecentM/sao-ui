@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="hu-HU">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SAO-UI</title>
+</head>
+
+<body class="loading" id="page">
+    <!-- build:style inline rev --><!-- /build -->
+        <!-- TARTALOM KEZDETE -->
+        
+    <div class="experimentSAOModalRoot">
+        <div class="contentwrap p-y-3">
+            <div class="text-xs-center m-b-3 hidden-sm-down">
+                <h1>404 - Logout not found</h1>
+            </div>
+            <div class="container p-a-2 experiment card experimentSAOModal">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 p-y-1">
+                        <img alt="SAO Logo" src="sao_logo_by_Vurdalak84.png" width="225px">
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="container-fluid">
+                            <div class="row">
+                                Attribution:
+                            </div>
+                            <div class="row">
+                                <a href="http://vurdalak84.deviantart.com/art/SAO-Sword-Art-Online-Logo-Render-447496306" target="_blank">Logo</a>
+                            </div>
+                            <div class="row">
+                                <a href="http://darkblackswords.deviantart.com/art/Sword-Art-Online-Vector-Icons-434245957" target="_blank">Buttons</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <div class="col-xs-12 col-md-2 p-y-1">
+                        <button type="button" class="btn btn-primary" id="SAOModalButton">
+                            Launch
+                        </button>
+                    </div>
+                    <div class="col-xs-12">
+                        <form id="SAOModalForm" data-toggle="validator">
+                            <div class="form-group">
+                                <label for="SAOInputTitle" class="control-label">Title:</label>
+                                <input name="name" type="text" class="form-control" id="SAOInputTitle" maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label for="SAOInputMessage">Message</label>
+                                <textarea name="message" class="form-control" id="SAOInputMessage" rows="3" maxlength="115"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-6">
+                                    <label for="SAOPositiveResponseTitleField" class="control-label">Positive response title:</label>
+                                    <input name="name" type="text" class="form-control" id="SAOPositiveResponseTitleField" maxlength="50">
+                                </div>
+                                <div class="form-group col-xs-6">
+                                    <label for="SAOPositiveResponseField" class="control-label">Positive response:</label>
+                                    <input name="name" type="text" class="form-control" id="SAOPositiveResponseField" maxlength="115">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="experimentSAOModalRoot">
+        <!-- Modal -->
+        <div class="modal fade sao" data-keyboard="false" data-backdrop="static" id="SAOModal" tabindex="-1" role="dialog" aria-labelledby="SAOModalLabel" aria-hidden="true">
+            <div class="modal-dialog closed" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-xs-center">
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>-->
+                        <h4 class="modal-title" id="SAOModalTitle"></h4>
+                    </div>
+                    <div class="modal-body text-xs-center c-vcenter c-hcenter p-x-3">
+                        <span id="SAOModalBody"></span>
+                    </div>
+                    <div class="modal-footer container-fluid p-y-2">
+                        <div class="row">
+                            <div class="col-xs-6 c-hcenter text-xs-center btnholder" id="SAOModalAccept">
+                                <div class="SAOOuterCircle o">
+                                    <!--<button type="button" class="btn btn-sao bg-info" id="SAOModalAccept">
+                                        <div class="SAOInnerIcon o circle"></div>
+                                    </button>-->
+                                </div>
+                            </div>
+                            <div class="col-xs-6 c-hcenter text-xs-center btnholder" id="SAOModalDeny">
+                                <div class="SAOOuterCircle x">
+                                    <!--<button type="button" class="btn btn-sao bg-danger" id="SAOModalDeny">
+                                        <div class="SAOInnerIcon x">
+                                            &#10060;
+                                        </div>
+                                    </button>-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="col-xs-12 m-t-1">
+                            <p>Debug options</p>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Force close</button>
+                            <button type="button" class="btn btn-info btn-toggle">Toggle collapse</button>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <audio id="saoMenuOpenAudio">
+            <source src="sound/sao_menu_open.wav">
+        </audio>
+        
+        <audio id="saoMenuSelectAudio">
+            <source src="sound/sao_menu_select.wav">
+        </audio>
+    </div>
+</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script src="experiments.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready( function () {
+            var saoMenuOpenAudio = document.getElementById("saoMenuOpenAudio");
+            var saoMenuSelectAudio = document.getElementById("saoMenuSelectAudio");
+        });
+    </script>
+    
+    <link rel="stylesheet" href="bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="experiments.css" charset="utf-8">
+    <link rel="stylesheet" href="utility.css" charset="utf-8">
+</html>
