@@ -29,14 +29,16 @@ body {
     left: 0;
     right: 0;
     filter: blur(10px) brightness(.8);
-    z-index: 0;
+    z-index: -1;
+    margin: -10px;
+    clip-path: inset(10px 9px 9px 10px);
 }
 
 .sao-blur-behind {
     box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, .5);
     background-color: transparent;
     position: relative;
-    z-index: 1
+    z-index: 1;
 }
 
 .sao-blur-behind > * {
