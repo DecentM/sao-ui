@@ -13,6 +13,10 @@ body {
     background-position: center center;
 }
 
+body.modal-open {
+    overflow-y: scroll !important;
+}
+
 /* Sword Art Online experiment ####################################################################################################### */
 
 .sao-blur-behind:before {
@@ -65,10 +69,6 @@ body {
     cursor: pointer
 }
 
-.experimentSAOModalRoot .modal.sao.in .modal-dialog {
-    transform: scale(1);
-}
-
 .experimentSAOModalRoot .circle .btn-sao {
     border-radius: 100%;
     height: 50px;
@@ -99,29 +99,6 @@ body {
 
 .experimentSAOModalRoot .SAOOuterCircle.danger {
     border-color: #D23C69;
-}
-
-.experimentSAOModalRoot .SAOInnerIcon {
-    background: none;
-}
-
-.experimentSAOModalRoot .SAOInnerIcon.o {
-    border: 6px white solid;
-    bottom: 0;
-    box-shadow: 0 -1px 1px 0 black;
-    height: 27px;
-    left: -6px;
-    position: relative;
-    right: 0;
-    top: 0;
-    width: 27px;
-}
-
-.experimentSAOModalRoot .SAOInnerIcon.x {
-    font-size: 30px;
-    margin-left: -11px;
-    margin-top: -2px;
-    text-shadow: 0 -1px 1px black
 }
 
 .experimentSAOModalRoot .modal-content {
