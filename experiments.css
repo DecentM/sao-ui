@@ -49,6 +49,10 @@ body.modal-open {
     position: relative;
 }
 
+.modal.sao.in .modal-dialog {		
+     transform: scale(1);		
+}
+
 .experimentSAOModalRoot .modal.sao .modal-dialog {
     transform: scale(.9);
     transition-duration: .075s;
